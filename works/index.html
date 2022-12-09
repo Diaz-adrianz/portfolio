@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- MY CSS  -->
+    <link rel="stylesheet" href="../_src/css/base.css" />
+    <link rel="stylesheet" href="../_src/css/component.css" />
+    <link rel="stylesheet" href="../_src/css/media.css" />
+
+    <!-- ICON GOOGLE CDN  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <link rel="shortcut icon" href="../_src/img/icon.png" type="image/x-icon">
+    <title>Diaz profil page</title>
+  </head>
+  <body id="subpage-works">
+    
+    <!-- LOAD SCREEN  -->
+    <div class="load-screen">
+        <figure>
+            <svg>
+                <circle class="meter" cx="75" cy="75" r="70" />
+            </svg>
+            <img src="../_src/img/icon.png" alt="">
+        </figure>
+    </div>
+
+    <!-- HEADER  -->
+    <header>
+        <a href="../" class="link gsap-anim" data-gsaptype="zoom-in" data-duration="1" data-once="true" data-delay="3">
+            <figure>
+                <img src="../_src/img/icon.png" alt="">
+            </figure>
+        </a>
+        <div class="backdrop" onclick="nav_toggle()"></div>
+        <nav>
+            <a href="../experience" class="link mono white-link yellow gsap-anim" data-gsaptype="fade-down" data-duration="0.3" data-once="true" data-delay="3">
+                <span class="yellow">01. </span>
+                Experiences
+            </a>
+            <a href="./" class="link mono white-link blue on gsap-anim" data-gsaptype="fade-down" data-duration="0.5" data-once="true" data-delay="3">
+                <span class="blue">02. </span>
+                Works
+            </a>
+            <a href="../about" class="link mono white-link salmon gsap-anim" data-gsaptype="fade-down" data-duration="0.7" data-once="true" data-delay="3">
+                <span class="salmon">03. </span>
+                About
+            </a>
+            <a href="../#contact" class="link mono white-link purple gsap-anim" data-gsaptype="fade-down" data-duration="0.9" data-once="true" data-delay="3">
+                <span class="purple">04. </span>
+                Contact
+            </a>
+            <a href="/" class="btn blue gsap-anim" data-gsaptype="fade-down" data-duration="1.1" data-once="true" data-delay="3">
+                Resume
+            </a>
+        </nav>
+        <button class="burger gsap-anim" data-gsaptype="fade-right" data-duration="1" data-once="true" onclick="nav_toggle()" data-delay="1" data-delay="3">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- NAVIGATIONS METERS  -->
+    <aside class="fix-l gsap-anim" data-gsaptype="zoom-out" data-duration="1" data-once="true" data-delay="3">
+        <div class="nav-dots">
+            <span class="on"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <span></span>
+    </aside>
+
+    <!-- SOCIAL MEDIA  -->
+    <aside class="fix-r gsap-anim" data-gsaptype="zoom-out" data-duration="1" data-once="true" data-delay="3">
+        <div class="social">
+            <a href="https://www.instagram.com/diaz_adrianz19/?hl=id" target="_blank" class="link fab fa-instagram"></a>
+            <a href="https://github.com/Diaz-adrianz" target="_blank" class="link fab fa-github"></a>
+            <a href="#" target="_blank" class="link fab fa-linkedin"></a>
+            <a href="mailto:diazz.developer@gmail.com"  target="_blank" class="link fas fa-envelope"></a>
+        </div>
+        <span></span>
+    </aside>
+
+    <!-- MAIN | CONTENTS -->
+    <main class="subpage">
+
+        <!-- CONTENTS: big project  -->
+        <section id="big-proj1">
+            <div class="flexbox min">
+                <div class="left">
+                    <h1 class="gsap-anim" data-gsaptype="fade-left" data-duration="0.4" data-once="true" data-delay="3">
+                        MYMO
+                    </h1>
+                    <div class="paragraf gsap-anim" data-gsaptype="fade-left" data-duration="0.7" data-once="true" data-delay="3">
+                        <div>
+                            <p>
+                                A simple <span class="blue">note-taking</span> and <span class="purple">task</span> management application. 
+                                It is intended for archiving and creating note. 
+                                Notes are stored in <span class="yellow">non-relational database</span> and can be tagged, edited, searched, reminded.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pills gsap-anim" data-gsaptype="fade-left" data-duration="1" data-once="true" data-delay="3">
+                        <a href="" class="link purple iconize">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <span class="btn btn-t">NodeJs</span>
+                        <span class="btn btn-t">Express</span>
+                        <span class="btn btn-t">MongoDB</span>
+                        <span class="btn btn-t">NPM</span>
+                    </div>
+                </div>
+                <div class="right gsap-anim" data-gsaptype="zoom-in" data-duration="0.8" data-once="true" data-delay="3">
+                    <div class="carousel" id="noteapp">
+                        <div class="control">
+                            <button onclick="carousel(this)" type="button" data-target="noteapp" class="btn btn-t iconize left-ctrl">
+                                <i class="material-icons-outlined">chevron_left</i>
+                            </button>
+                            <button onclick="carousel(this)" type="button" data-target="noteapp" class="btn btn-t iconize right-ctrl">
+                                <i class="material-icons-outlined">chevron_right</i>
+                            </button>
+                        </div>
+                        <div class="items" data-crslindex="0">
+                            <figure>
+                                <img src="../_src/img/aurora2.jpg" loading="lazy" alt="opo iki">
+                            </figure>
+                            <figure>
+                                <img src="../_src/img/aurora2.jpg" loading="lazy" alt="opo iki 2">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="big-proj2">
+            <div class="flexbox min reverse">
+                <div class="left">
+                    <h1 class="gsap-anim" data-gsaptype="fade-right" data-duration="0.4">
+                        Serat catalogue
+                    </h1>
+                    <div class="paragraf gsap-anim" data-gsaptype="fade-right" data-duration="0.7">
+                        <div>
+                            <p>
+                                Collection of <span class="yellow">products information</span> and can be searched, sorted and linked to e-commerce address. 
+                                Products can be manage by admin in dashboard page <span class="blue">(create, read, update, delete)</span>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pills gsap-anim" data-gsaptype="fade-right" data-duration="1">
+                        <a href="" class="link purple iconize">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <span class="btn btn-t">Bootstap 5</span>
+                        <span class="btn btn-t">PHP</span>
+                        <span class="btn btn-t">Mysql</span>
+                    </div>
+                </div>
+                <div class="right gsap-anim" data-gsaptype="zoom-in" data-duration="0.8">
+                    <div class="carousel" id="catalogueweb">
+                        <div class="control">
+                            <button onclick="carousel(this)" type="button" data-target="catalogueweb" class="btn btn-t iconize left-ctrl">
+                                <i class="material-icons-outlined">chevron_left</i>
+                            </button>
+                            <button onclick="carousel(this)" type="button" data-target="catalogueweb" class="btn btn-t iconize right-ctrl">
+                                <i class="material-icons-outlined">chevron_right</i>
+                            </button>
+                        </div>
+                        <div class="items" data-crslindex="0">
+                            <figure>
+                                <img src="../_src/img/works/serat1.png" loading="lazy" alt="Home page">
+                            </figure>
+                            <figure>
+                                <img src="../_src/img/works/serat2.png" loading="lazy" alt="Catalogue">
+                            </figure>
+                            <figure>
+                                <img src="../_src/img/works/serat3.png" loading="lazy" alt="Product list">
+                            </figure>
+                            <figure>
+                                <img src="../_src/img/works/serat4.png" loading="lazy" alt="Edit product">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENTS: mini projects  -->
+        <section id="mini-proj1">
+            <div class="flexbox min">
+                <div class="left">
+                    <h1 class="gsap-anim" data-gsaptype="fade-left" data-duration="0.4">
+                        Ingfokanime
+                    </h1>
+                    <div class="paragraf gsap-anim" data-gsaptype="fade-left" data-duration="0.7">
+                        <div>
+                            <p>
+                                List of <span class="blue">anime (japan animation) information</span> all of time. 
+                                User can explore anime by title, genre, top rank, release time and currently showing. 
+                                Based on <span class="yellow">myanimelist</span> with intermediary <span class="purple">Jikan API</span>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pills gsap-anim" data-gsaptype="fade-left" data-duration="1">
+                        <a href="" class="link salmon iconize">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ingfokanime.netlify.app" class="link blue iconize">
+                            <i class="material-icons-outlined">launch</i>
+                        </a>
+                        <span class="btn btn-t">CSS</span>
+                        <span class="btn btn-t">JavaScript</span>
+                        <span class="btn btn-t">API</span>
+                    </div>
+                </div>
+                <div class="right gsap-anim" data-gsaptype="zoom-in" data-duration="0.8">
+                    <div class="carousel" id="ingfokanime">
+                        <div class="control">
+                            <button onclick="carousel(this)" type="button" data-target="ingfokanime" class="btn btn-t iconize left-ctrl">
+                                <i class="material-icons-outlined">chevron_left</i>
+                            </button>
+                            <button onclick="carousel(this)" type="button" data-target="ingfokanime" class="btn btn-t iconize right-ctrl">
+                                <i class="material-icons-outlined">chevron_right</i>
+                            </button>
+                        </div>
+                        <div class="items" data-crslindex="0">
+                            <figure>
+                                <img src="../_src/img/works/nime1.png" loading="lazy" alt="Search anime">
+                            </figure>
+                            <figure>
+                                <img src="../_src/img/works/nime2.png" loading="lazy" alt="Top tier">
+                            </figure>
+                            <figure>
+                                <img src="../_src/img/works/nime3.png" loading="lazy" alt="Anime season">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mini-proj2">
+            <div class="flexbox min reverse">
+                <div class="left">
+                    <h1 class="gsap-anim" data-gsaptype="fade-right" data-duration="0.4">
+                        Binjai 100
+                    </h1>
+                    <div class="paragraf gsap-anim" data-gsaptype="fade-right" data-duration="0.7">
+                        <div>
+                            <p>
+                                Is a casual game to <span class="salmon">knock down banana tree</span> as fast as possible in 100 hits and <span class="blue">reach the highest score</span>. 
+                                User just <span class="purple">click-click</span> the button to play. 
+                                inspired by "salam dari binjai" trend.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pills gsap-anim" data-gsaptype="fade-right" data-duration="1">
+                        <a href="" class="link iconize yellow">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://diaz-adrianz.github.io/binjai-100-v2/" class="link purple iconize">
+                            <i class="material-icons-outlined">launch</i>
+                        </a>
+                        <span class="btn btn-t">CSS</span>
+                        <span class="btn btn-t">JavaScript</span>
+                    </div>
+                </div>
+                <div class="right gsap-anim" data-gsaptype="zoom-in" data-duration="0.8">
+                    <div class="carousel" id="binjai100">
+                        <div class="control">
+                            <button onclick="carousel(this)" type="button" data-target="binjai100" class="btn btn-t iconize left-ctrl">
+                                <i class="material-icons-outlined">chevron_left</i>
+                            </button>
+                            <button onclick="carousel(this)" type="button" data-target="binjai100" class="btn btn-t iconize right-ctrl">
+                                <i class="material-icons-outlined">chevron_right</i>
+                            </button>
+                        </div>
+                        <div class="items" data-crslindex="0">
+                            <figure>
+                                <img src="../_src/img/works/binjai1.png" loading="lazy" alt="Start screen">
+                            </figure>
+                            <figure>
+                                <img src="../_src/img/works/binjai2.png" loading="lazy" alt="Gameplay">
+                            </figure>
+                            <figure>
+                                <img src="../_src/img/works/binjai3.png" loading="lazy" alt="Finish!">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENTS: projects  -->
+        <section id="projs" class="d-0">
+            <div class="listbox">
+                <h3 class="ubuntu">And many more...</h3>
+                <div class="inner">
+                    <ul class="items">
+                        <li class=" gsap-anim" data-gsaptype="fade-left" data-duration="0.5">
+                            <button class="link white-link purple on">Apple</button>
+                        </li>
+                        <li class=" gsap-anim" data-gsaptype="fade-left" data-duration="0.7">
+                            <button class="link white-link salmon">Microsoft</button>
+                        </li>
+                        <li class=" gsap-anim" data-gsaptype="fade-left" data-duration="0.9">
+                            <button class="link white-link yellow">Jayajaya</button>
+                        </li>
+                    </ul>
+                    <div class="desc gsap-anim" data-gsaptype="zoom-in" data-duration="0.7">
+                        <h5 class="ubuntu">
+                            Web Developer
+                            <a href="" class="link yellow">@apple</a>
+                        </h5>
+                        <span class="text-sm mono">Jan 2018 - May 2020</span>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugit.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, optio.
+                            </li>
+                        </ul>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quisquam quas quos debitis officia eaque suscipit excepturi aliquam vero minus?
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- OTHERs  -->
+        <section id="others">
+            <div class="undone">
+                <div class="gear gsap-anim" data-gsaptype="zoom-in" data-duration="0.75">
+                    <span>
+                        <i class="material-icons">settings</i>
+                    </span>
+                    <span>
+                        <i class="material-icons">settings</i>
+                    </span>
+                </div>
+                <div class="text gsap-anim" data-gsaptype="fade-up" data-duration="1">
+                    <h3>This section is still <span class="salmon">under construction</span>.</h3>
+                    <p>Please come back later to see more!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER  -->
+        <section id="footer">
+            <div>
+                <h3 class="ubuntu gsap-anim" data-gsaptype="fade-up" data-duration="0.6">Thanks for viewing!</h3>
+                <a href="../" class="btn btn salmon iconize-text gsap-anim" data-gsaptype="zoom-in" data-duration="0.3">
+                    <i class="material-icons-outlined">keyboard_backspace</i>
+                    Back to home
+                </a>
+                <p class="mono">Designed & built by Diaz Adrianz</p>
+                <div class="social social-foot">
+                    <a href="https://www.instagram.com/diaz_adrianz19/?hl=id" target="_blank" class="link fab fa-instagram"></a>
+                    <a href="https://github.com/Diaz-adrianz" target="_blank" class="link fab fa-github"></a>
+                    <a href="#" target="_blank" class="link fab fa-linkedin"></a>
+                    <a href="mailto:diazz.developer@gmail.com"  target="_blank" class="link fas fa-envelope"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MY JS  -->
+    <script src="../_src/js/listbox.js"></script>
+    <script src="../_src/js/base.js"></script>
+
+    <!-- PACKAGES  -->
+    <script src="../_src/js/gsap-public/minified/gsap.min.js"></script>
+    <script src="../_src/js/gsap-public/minified/ScrollTrigger.min.js"></script>
+    <script src="../_src/js/prevent-rotate/index.js"></script>
+
+    <script src="../_src/js/myconfig-gsap.js"></script>
+    <script src="../_src/js/myconfig-preventrotate.js"></script>
+
+    <script>
+        carousel_auto()
+    </script>
+    <!-- ICON FONTAWSOME CDN  -->
+    <script src="https://kit.fontawesome.com/bc418b707a.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>

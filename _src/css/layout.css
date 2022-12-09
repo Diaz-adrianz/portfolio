@@ -1,0 +1,271 @@
+/* LOAD-ScREEN  */
+.load-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 999;
+	display: none;
+	background-color: var(--bg);
+}
+.load-screen.show {
+	display: flex;
+}
+.load-screen figure {
+	border: none;
+}
+.load-screen > figure {
+	margin: auto;
+	border-radius: 50%;
+	overflow: visible !important;
+	width: 150px;
+	height: 150px;
+	padding: 1em;
+}
+.load-screen svg {
+	position: absolute;
+	top: 0;
+	width: inherit;
+	height: inherit;
+	left: 0;
+}
+
+.load-screen .meter {
+	fill: none;
+	stroke-width: 5px;
+	stroke-linecap: round;
+	stroke-dasharray: 500;
+	stroke-dashoffset: 0;
+	stroke: var(--purple);
+	animation: progress 1.5s linear;
+}
+#workspage .load-screen .meter {
+	stroke: var(--neonblue);
+}
+#experiencepage .load-screen .meter {
+	stroke: var(--yellow);
+}
+#aboutpage .load-screen .meter {
+	stroke: var(--salmon);
+}
+@keyframes progress {
+	from {
+		stroke-dashoffset: 500;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+/* HEADER  */
+header {
+	width: 100%;
+	padding: 1em 2em 0;
+	gap: 1.5em;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 90;
+	background-color: var(--bg);
+	transition: transform 0.3s;
+}
+header.scroll {
+	transform: translateY(-100%);
+}
+header > .link:hover {
+	position: relative;
+	transform: scale(0.9);
+}
+header > .link:hover::after {
+	display: none;
+}
+header > .link figure {
+	width: 3em;
+	height: 3em;
+	border: none;
+}
+header > .btn {
+	display: none;
+	font-size: 2em;
+}
+header nav .social {
+	display: none !important;
+}
+
+/* ASIDE DECOR */
+aside.fix-l,
+aside.fix-r {
+	position: fixed;
+	bottom: 0;
+	z-index: 60;
+}
+aside.fix-l {
+	left: 2em;
+	transform-origin: 50% 100%;
+}
+aside.fix-l span {
+	background-color: var(--silver);
+	width: 3px;
+	display: block;
+	transition: transform 0.5s, background-color 0.2s;
+}
+aside.fix-l > span {
+	height: 10vh;
+}
+aside.fix-l .nav-dots span {
+	height: 3em;
+	cursor: pointer;
+	position: relative;
+}
+aside.fix-l .nav-dots span:hover {
+	background-color: var(--silver);
+}
+aside.fix-l .nav-dots span.on {
+	transform: scaleX(3);
+	border-radius: 50rem;
+	background-color: var(--white);
+}
+
+aside.fix-r {
+	right: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+aside.fix-r > span {
+	width: 3px;
+	display: block;
+	background-color: var(--silver);
+	height: 30vh;
+	margin-top: 1em;
+}
+aside.fix-r .social {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+/* MAIN | CONTENTS  */
+main {
+	width: 100%;
+	max-width: 1600px;
+	display: flex;
+	flex-direction: column;
+	padding: 0 10em;
+	margin: auto;
+	overflow: hidden auto;
+	scroll-behavior: smooth;
+	color: var(--white);
+	height: 100vh;
+	background-color: var(--bg);
+	scroll-snap-type: y mandatory;
+}
+main::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;
+}
+main > section {
+	width: 100%;
+	padding: 3em 0 1em;
+	min-height: 100vh;
+	position: relative;
+	scroll-snap-align: center;
+	display: flex;
+}
+main > section > div {
+	width: 100%;
+	margin: auto;
+	max-height: 90vh;
+}
+main > section > div::-webkit-scrollbar {
+	display: none;
+}
+main > section > div > div {
+	margin: 0.5em 0;
+}
+/* CONTENT: index page  */
+#home {
+	min-height: 100vh !important;
+}
+#home > div {
+	padding-bottom: 3em;
+}
+#home > div h1 {
+	font-size: 4em;
+	line-height: 1.2em;
+	margin-bottom: 0.3em;
+}
+#home > div h1 span {
+	min-height: 0.9em;
+	display: inline-block;
+}
+#home .typed-cursor {
+	color: var(--purple);
+}
+
+#exp-spoil .d-flex .minor,
+#works-spoil .d-flex .minor,
+#ab-spoil .d-flex .minor,
+#ab-skills .d-flex .minor {
+	max-width: 150px;
+}
+#ab-tech .d-flex .minor,
+#people .d-flex .minor,
+#ab-special .d-flex .minor {
+	max-width: 170px;
+}
+#contact .d-flex .minor,
+#contact .d-flex .major {
+	width: 100%;
+	max-width: 400px;
+}
+#exp-spoil .d-flex .minor h2,
+#works-spoil .d-flex .minor h2,
+#ab-spoil .d-flex .minor h2,
+#people .d-flex .minor h2,
+#ab-tech .d-flex .minor h2,
+#ab-skills .d-flex .minor h2,
+#ab-special .d-flex .minor h2 {
+	text-transform: uppercase;
+	width: 100%;
+	overflow-wrap: break-word;
+}
+#exp-spoil .d-flex .card,
+#people .d-flex .card {
+	min-width: 280px;
+}
+
+#people .card figure {
+	width: 2.5em;
+	height: 2.5em;
+	border-radius: 50%;
+}
+#sendmessage .alert.warning i {
+	--rotation: -360deg;
+	animation: gear 3s linear infinite;
+}
+/* CONTENT experience page  */
+#exp-1 .gallerybox {
+	width: 100%;
+	max-width: 450px;
+	max-height: 450px;
+}
+
+/* CONTENT works page  */
+#w-ingfokanime .gallerybox,
+#w-serat .gallerybox,
+#w-comikaze .gallerybox {
+	width: 100%;
+	max-width: 500px;
+}
+#w-ingfokanime > .d-flex,
+#w-serat > .d-flex,
+#w-comikaze > .d-flex {
+	flex-wrap: wrap;
+}
+
+/* CONTENT about page  */
+#ab-me .figurify {
+	max-width: 450px;
+	max-height: 450px;
+}

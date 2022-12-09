@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- MY CSS  -->
+		<link rel="stylesheet" href="_src/css/base.css" />
+		<link rel="stylesheet" href="_src/css/layout.css" />
+		<link rel="stylesheet" href="_src/css/component.css" />
+		<link rel="stylesheet" href="_src/css/media.css" />
+
+		<!-- ICON GOOGLE CDN  -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+
+		<link rel="shortcut icon" href="_src/img/icon.png" type="image/x-icon" />
+		<title>Diaz profil page</title>
+	</head>
+	<body id="workspage">
+		<!-- LOAD SCREEN  -->
+		<div class="load-screen fade show">
+			<figure>
+				<svg>
+					<circle class="meter" cx="75" cy="75" r="70" />
+				</svg>
+				<img src="_src/img/icon.png" alt="" />
+			</figure>
+		</div>
+
+		<div class="imageview fade" id="imageview">
+			<button
+				data-target="imageview"
+				onclick="showup(event, this, 'close')"
+				class="btn btn-t btn-lg iconize-h"
+			>
+				<i class="material-icons">close</i>
+			</button>
+			<figure>
+				<img loading="lazy" src="" alt="" />
+			</figure>
+			<p class="title btn btn-s-s">eduwork_freeclass_webdev</p>
+		</div>
+
+		<div class="backdrop fade"></div>
+
+		<!-- HEADER  -->
+		<header class="d-flex ai-center jc-between">
+			<a
+				href="../"
+				class="link brand gsap-anim"
+				data-gsaptype="zoom-out"
+				data-duration="1"
+				data-once="true"
+				data-delay="2"
+			>
+				<figure>
+					<img loading="lazy" src="_src/img/icon.png" alt="" />
+				</figure>
+			</a>
+			<nav class="d-flex ai-center gap-4 with-bd" id="navigation">
+				<a
+					href="experience.html"
+					class="no-break link mono white-link yellow gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.3"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="yellow">01.</span>
+					Experiences
+				</a>
+				<a
+					href="works.html"
+					class="on link mono white-link blue gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.5"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="blue">02.</span>
+					Works
+				</a>
+				<a
+					href="about.html"
+					class="link mono white-link salmon gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.7"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="salmon">03.</span>
+					About
+				</a>
+				<a
+					href="/#contact"
+					class="link mono white-link purple gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.9"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="purple">04.</span>
+					Contact
+				</a>
+				<a
+					href="#"
+					class="btn gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="1.1"
+					data-once="true"
+					data-delay="2"
+				>
+					Resume
+				</a>
+				<div class="social d-flex gap-2 mt-3">
+					<a
+						href="https://www.instagram.com/diaz_adrianz19/?hl=id"
+						target="_blank"
+						class="link fab fa-instagram"
+					></a>
+					<a
+						href="https://github.com/Diaz-adrianz"
+						target="_blank"
+						class="link fab fa-github"
+					></a>
+					<a href="#" target="_blank" class="link fab fa-linkedin"></a>
+					<a
+						href="mailto:diazz.developer@gmail.com"
+						target="_blank"
+						class="link fas fa-envelope"
+					></a>
+				</div>
+			</nav>
+			<button
+				class="btn btn-t gsap-anim iconize-h"
+				data-target="navigation"
+				data-gsaptype="fade-right"
+				data-duration="1"
+				data-once="true"
+				data-delay="2"
+				onclick="showup(event, this, 'menu')"
+			>
+				<i class="material-icons">menu</i>
+			</button>
+		</header>
+
+		<!-- NAVIGATIONS METERS  -->
+		<aside
+			class="fix-l gsap-anim"
+			data-gsaptype="zoom-out"
+			data-duration="1"
+			data-once="true"
+			data-delay="2"
+		>
+			<div class="nav-dots">
+				<span class="on"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<span></span>
+		</aside>
+
+		<!-- SOCIAL MEDIA  -->
+		<aside
+			class="fix-r gsap-anim"
+			data-gsaptype="zoom-out"
+			data-duration="1"
+			data-once="true"
+			data-delay="2"
+		>
+			<div class="social">
+				<a
+					href="https://www.instagram.com/diaz_adrianz19/?hl=id"
+					target="_blank"
+					class="link fab fa-instagram"
+				></a>
+				<a
+					href="https://github.com/Diaz-adrianz"
+					target="_blank"
+					class="link fab fa-github"
+				></a>
+				<a href="#" target="_blank" class="link fab fa-linkedin"></a>
+				<a
+					href="mailto:diazz.developer@gmail.com"
+					target="_blank"
+					class="link fas fa-envelope"
+				></a>
+			</div>
+			<span></span>
+		</aside>
+
+		<!-- MAIN | CONTENTS -->
+		<main>
+			<section id="w-comikaze">
+				<div class="d-flex gap-5 flex-row-reverse">
+					<div class="gallerybox minor">
+						<figure
+							class="figurify img gsap-anim"
+							data-gsaptype="zoom-in"
+							data-duration="0.5"
+							data-once="true"
+							data-delay="2"
+						>
+							<div class="overlay">
+								<h4 class="mb-2">HOMEPAGE</h4>
+								<span># Trending Popular and Random Comics</span>
+							</div>
+							<img
+								class="fade"
+								loading="lazy"
+								src="_src/img/works/comi1.png"
+								alt=""
+							/>
+						</figure>
+						<div class="imgs">
+							<img
+								class="on gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="0.3"
+								data-once="true"
+								data-delay="2"
+								data-title="HOMEPAGE"
+								data-subtitle="# Trending Popular and Random Comics"
+								loading="lazy"
+								src="_src/img/works/comi1.png"
+								alt=""
+							/>
+							<img
+								class="gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="0.5"
+								data-once="true"
+								data-delay="2"
+								data-title="EXPLORE"
+								data-subtitle="# Search Comic By Title Keyword"
+								loading="lazy"
+								src="_src/img/works/comi2.png"
+								alt=""
+							/>
+							<img
+								class="gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="0.8"
+								data-once="true"
+								data-delay="2"
+								data-title="LOCAL DATA"
+								data-subtitle="# Collection of User Activity Data Stored Locally"
+								loading="lazy"
+								src="_src/img/works/comi3.png"
+								alt=""
+							/>
+							<img
+								class="gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="1"
+								data-once="true"
+								data-delay="2"
+								data-title="DETAILED"
+								data-subtitle="# Comic Detail Page"
+								loading="lazy"
+								src="_src/img/works/comi4.png"
+								alt=""
+							/>
+							<img
+								class="gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="1.2"
+								data-once="true"
+								data-delay="2"
+								data-title="EASE OF USE"
+								data-subtitle="# Pinch To Zoom Comic Page"
+								loading="lazy"
+								src="_src/img/works/comi5.png"
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="major">
+						<h3
+							class="gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.5"
+							data-once="true"
+							data-delay="2"
+						>
+							Comikaze
+						</h3>
+						<span
+							class="mono gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.8"
+							data-once="true"
+							data-delay="2"
+						>
+							Mobile App - API
+						</span>
+						<div class="tablayout flex-column-reverse ai-end mt-3">
+							<div class="tabs">
+								<button
+									class="btn btn-t on gsap-anim"
+									data-gsaptype="zoom-in"
+									data-duration="0.3"
+									data-once="true"
+									data-delay="2"
+								>
+									Overview
+									<div class="indicator"></div>
+								</button>
+								<button
+									class="btn btn-t gsap-anim"
+									data-gsaptype="zoom-in"
+									data-duration="0.6"
+									data-once="true"
+									data-delay="2"
+								>
+									Stack
+								</button>
+								<button
+									class="btn btn-t gsap-anim"
+									data-gsaptype="zoom-in"
+									data-duration="0.8"
+									data-once="true"
+									data-delay="2"
+								>
+									Links
+								</button>
+							</div>
+							<div
+								class="contents gsap-anim"
+								data-gsaptype="fade-up"
+								data-duration="0.75"
+								data-once="true"
+								data-delay="2"
+							>
+								<div class="c1 pb-5">
+									<p class="">
+										It is a
+										<span class="salmon">mobile application</span>
+										platform for finding, reading and collecting
+										<span class="blue">comics</span>
+										which are available in
+										<span class="yellow">Indonesian translation</span>
+										from 3 countries. Among them Manga, Manhwa, Manhua.
+										<span class="salmon">Interface design</span>
+										and
+										<span class="purple">convinience</span>
+										are
+										<span class="blue">priority</span>
+										in this application.
+									</p>
+								</div>
+								<div class="c2">
+									<div class="d-flex gap-5">
+										<ul class="list blue">
+											<li>
+												<a href="#" class="link">
+													<span class="white">Java</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">XML</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">NodeJS</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">Express</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="list blue">
+											<li>
+												<a href="#" class="link">
+													<span class="white">Retrofit</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">Axios</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">Cheerio</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">Zoomage</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="c3">
+									<a
+										href="https://github.com/Diaz-adrianz/comikaze"
+										class="btn btn-s-s iconize-h jc-center me-2"
+									>
+										<i class="fab fa-github"></i>
+										Github
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="w-ingfokanime">
+				<div class="d-flex gap-5">
+					<div class="gallerybox minor">
+						<figure
+							class="figurify img gsap-anim"
+							data-gsaptype="zoom-in"
+							data-duration="0.5"
+							data-once="true"
+						>
+							<div class="overlay">
+								<h4 class="mb-2">SEARCH</h4>
+								<span># Search anime by keyword</span>
+							</div>
+							<img
+								class="fade"
+								loading="lazy"
+								src="_src/img/works/nime1.png"
+								alt=""
+							/>
+						</figure>
+						<div class="imgs">
+							<img
+								class="on gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="0.3"
+								data-once="true"
+								data-title="SEARCH"
+								data-subtitle="# Search anime by keyword"
+								loading="lazy"
+								src="_src/img/works/nime1.png"
+								alt=""
+							/>
+							<img
+								class="gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="0.5"
+								data-once="true"
+								data-title="TOP"
+								data-subtitle="# Get current top rank anime characters"
+								loading="lazy"
+								src="_src/img/works/nime2.png"
+								alt=""
+							/>
+							<img
+								class="gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="0.8"
+								data-once="true"
+								data-title="SCHEDULE"
+								data-subtitle="# List of anime currently airing this week"
+								loading="lazy"
+								src="_src/img/works/nime3.png"
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="major">
+						<h3
+							class="gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.5"
+							data-once="true"
+						>
+							Ingfokanime
+						</h3>
+						<span
+							class="mono gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.8"
+							data-once="true"
+						>
+							Web - FetchJS
+						</span>
+						<div class="tablayout flex-column-reverse mt-3">
+							<div class="tabs">
+								<button
+									class="btn btn-t on gsap-anim"
+									data-gsaptype="zoom-in"
+									data-duration="0.3"
+									data-once="true"
+								>
+									Overview
+									<div class="indicator"></div>
+								</button>
+								<button
+									class="btn btn-t gsap-anim"
+									data-gsaptype="zoom-in"
+									data-duration="0.6"
+									data-once="true"
+								>
+									Stack
+								</button>
+								<button
+									class="btn btn-t gsap-anim"
+									data-gsaptype="zoom-in"
+									data-duration="0.8"
+									data-once="true"
+								>
+									Links
+								</button>
+							</div>
+							<div
+								class="contents gsap-anim"
+								data-gsaptype="fade-up"
+								data-duration="0.75"
+								data-once="true"
+							>
+								<div class="c1 pb-5">
+									<p class="">
+										List of
+										<span class="blue">
+											anime (japan animation) information
+										</span>
+										all of time. User can explore anime by title, genre, top
+										rank, release time and currently showing. Based on
+										<span class="yellow">myanimelist</span>
+										with intermediary
+										<span class="purple">Jikan API</span>
+										.
+									</p>
+								</div>
+								<div class="c2">
+									<div class="d-flex gap-5">
+										<ul class="list yellow">
+											<li>
+												<a href="#" class="link">
+													<span class="white">HTML5</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">CSS3</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="list yellow">
+											<li>
+												<a href="#" class="link">
+													<span class="white">JavaScript</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">JikanAPI</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="c3">
+									<a href="" class="btn btn-s-s iconize-h jc-center me-2">
+										<i class="fab fa-github"></i>
+										Github
+									</a>
+									<a
+										href="https://ingfokanime.netlify.app"
+										target="_blank"
+										class="btn btn-s-s iconize-h jc-center me-2"
+									>
+										<i class="fab fa-chrome"></i>
+										Netlify
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="w-serat">
+				<div class="d-flex gap-5 flex-row-reverse">
+					<div class="gallerybox minor">
+						<figure
+							class="figurify img gsap-anim"
+							data-gsaptype="zoom-in"
+							data-duration="0.5"
+							data-once="true"
+						>
+							<div class="overlay">
+								<h4 class="mb-2">MAIN</h4>
+								<span># Serat landing page</span>
+							</div>
+							<img
+								class="fade"
+								loading="lazy"
+								src="_src/img/works/serat1.png"
+								alt=""
+							/>
+						</figure>
+						<div class="imgs">
+							<img
+								class="on gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="0.3"
+								data-once="true"
+								data-title="MAIN"
+								data-subtitle="# Serat landing page"
+								loading="lazy"
+								src="_src/img/works/serat1.png"
+								alt=""
+							/>
+							<img
+								class="gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="0.5"
+								data-once="true"
+								data-title="EXPLORE"
+								data-subtitle="# Filter to find products"
+								loading="lazy"
+								src="_src/img/works/serat2.png"
+								alt=""
+							/>
+							<img
+								class="gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="0.8"
+								data-once="true"
+								data-title="ADMIN"
+								data-subtitle="# Main dashboard"
+								loading="lazy"
+								src="_src/img/works/serat3.png"
+								alt=""
+							/>
+							<img
+								class="gsap-anim"
+								data-gsaptype="fade-left"
+								data-duration="1"
+								data-once="true"
+								data-title="FORM"
+								data-subtitle="# Admin product management"
+								loading="lazy"
+								src="_src/img/works/serat4.png"
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="major">
+						<h3
+							class="gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.5"
+							data-once="true"
+						>
+							Serat Catalogue
+						</h3>
+						<span
+							class="mono gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.8"
+							data-once="true"
+						>
+							Dynamic Web - CRUD
+						</span>
+						<div class="tablayout flex-column-reverse ai-end mt-3">
+							<div class="tabs">
+								<button
+									class="btn btn-t on gsap-anim"
+									data-gsaptype="zoom-in"
+									data-duration="0.3"
+									data-once="true"
+								>
+									Overview
+									<div class="indicator"></div>
+								</button>
+								<button
+									class="btn btn-t gsap-anim"
+									data-gsaptype="zoom-in"
+									data-duration="0.6"
+									data-once="true"
+								>
+									Stack
+								</button>
+								<button
+									class="btn btn-t gsap-anim"
+									data-gsaptype="zoom-in"
+									data-duration="0.8"
+									data-once="true"
+								>
+									Links
+								</button>
+							</div>
+							<div
+								class="contents gsap-anim"
+								data-gsaptype="fade-up"
+								data-duration="0.75"
+								data-once="true"
+							>
+								<div class="c1 pb-5">
+									<p class="">
+										Collection of
+										<span class="yellow">products information</span>
+										and can be searched, sorted and linked to e-commerce
+										address. Products can be manage by admin in dashboard page
+										<span class="blue">(create, read, update, delete)</span>
+										.
+									</p>
+								</div>
+								<div class="c2">
+									<div class="d-flex gap-5">
+										<ul class="list salmon">
+											<li>
+												<a href="#" class="link">
+													<span class="white">Bootstap</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">JavaScript</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="list salmon">
+											<li>
+												<a href="#" class="link">
+													<span class="white">PHP</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="link">
+													<span class="white">MySql</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="c3">
+									<a href="" class="btn btn-s-s iconize-h jc-center me-2">
+										<i class="devicon-github-plain"></i>
+										Github
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- MY JS  -->
+		<script src="_src/js/base.js"></script>
+
+		<!-- PACKAGES  -->
+		<script src="_src/js/gsap-public/minified/gsap.min.js"></script>
+		<script src="_src/js/gsap-public/minified/ScrollTrigger.min.js"></script>
+
+		<script src="_src/js/myconfig-gsap.js"></script>
+
+		<!-- ICON FONTAWSOME CDN  -->
+		<script
+			src="https://kit.fontawesome.com/bc418b707a.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

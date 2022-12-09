@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- MY CSS  -->
+		<link rel="stylesheet" href="_src/css/base.css" />
+		<link rel="stylesheet" href="_src/css/layout.css" />
+		<link rel="stylesheet" href="_src/css/component.css" />
+		<link rel="stylesheet" href="_src/css/media.css" />
+
+		<!-- ICON GOOGLE CDN  -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+
+		<link rel="shortcut icon" href="_src/img/icon.png" type="image/x-icon" />
+		<title>Diaz profil page</title>
+	</head>
+	<body>
+		<!-- LOAD SCREEN  -->
+		<div class="load-screen fade show">
+			<figure>
+				<svg>
+					<circle class="meter" cx="75" cy="75" r="70" />
+				</svg>
+				<img loading="lazy" src="_src/img/icon.png" alt="" />
+			</figure>
+		</div>
+
+		<div class="backdrop fade"></div>
+
+		<!-- HEADER  -->
+		<header class="d-flex ai-center jc-between">
+			<a
+				href="../"
+				class="link brand gsap-anim"
+				data-gsaptype="zoom-out"
+				data-duration="1"
+				data-once="true"
+				data-delay="2"
+			>
+				<figure>
+					<img loading="lazy" src="_src/img/icon.png" alt="" />
+				</figure>
+			</a>
+			<nav class="d-flex ai-center gap-4 with-bd" id="navigation">
+				<a
+					href="experience.html"
+					class="no-break link mono white-link yellow gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.3"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="yellow">01.</span>
+					Experiences
+				</a>
+				<a
+					href="works.html"
+					class="link mono white-link blue gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.5"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="blue">02.</span>
+					Works
+				</a>
+				<a
+					href="about.html"
+					class="link mono white-link salmon gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.7"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="salmon">03.</span>
+					About
+				</a>
+				<a
+					href="#contact"
+					class="link mono white-link purple gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.9"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="purple">04.</span>
+					Contact
+				</a>
+				<a
+					href="#"
+					class="btn gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="1.1"
+					data-once="true"
+					data-delay="2"
+				>
+					Resume
+				</a>
+				<div class="social d-flex gap-2 mt-3">
+					<a
+						href="https://www.instagram.com/diaz_adrianz19/?hl=id"
+						target="_blank"
+						class="link fab fa-instagram"
+					></a>
+					<a
+						href="https://github.com/Diaz-adrianz"
+						target="_blank"
+						class="link fab fa-github"
+					></a>
+					<a href="#" target="_blank" class="link fab fa-linkedin"></a>
+					<a
+						href="mailto:diazz.developer@gmail.com"
+						target="_blank"
+						class="link fas fa-envelope"
+					></a>
+				</div>
+			</nav>
+
+			<button
+				class="btn btn-t gsap-anim iconize-h"
+				data-target="navigation"
+				data-gsaptype="fade-right"
+				data-duration="1"
+				data-once="true"
+				data-delay="2"
+				onclick="showup(event, this, 'menu')"
+			>
+				<i class="material-icons">menu</i>
+			</button>
+		</header>
+
+		<!-- NAVIGATIONS METERS  -->
+		<aside
+			class="fix-l gsap-anim"
+			data-gsaptype="zoom-out"
+			data-duration="1"
+			data-once="true"
+			data-delay="2"
+		>
+			<div class="nav-dots">
+				<span class="on"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<span></span>
+		</aside>
+
+		<!-- SOCIAL MEDIA  -->
+		<aside
+			class="fix-r gsap-anim"
+			data-gsaptype="zoom-out"
+			data-duration="1"
+			data-once="true"
+			data-delay="2"
+		>
+			<div class="social">
+				<a
+					href="https://www.instagram.com/diaz_adrianz19/?hl=id"
+					target="_blank"
+					class="link fab fa-instagram"
+				></a>
+				<a
+					href="https://github.com/Diaz-adrianz"
+					target="_blank"
+					class="link fab fa-github"
+				></a>
+				<a href="#" target="_blank" class="link fab fa-linkedin"></a>
+				<a
+					href="mailto:diazz.developer@gmail.com"
+					target="_blank"
+					class="link fas fa-envelope"
+				></a>
+			</div>
+			<span></span>
+		</aside>
+
+		<!-- MAIN | CONTENTS -->
+		<main>
+			<!-- CONTENT: home  -->
+			<section id="home">
+				<div class="d-flex m-auto">
+					<div class="w-100">
+						<p
+							class="yellow mono gsap-anim"
+							data-gsaptype="zoom-in"
+							data-duration="0.75"
+							data-once="true"
+							data-delay="2"
+						>
+							Hello, I'am
+						</p>
+						<h1>
+							<span
+								class="gsap-anim white"
+								data-gsaptype="fade-up"
+								data-duration="0.75"
+								data-once="true"
+								data-delay="2"
+							>
+								Diaz Adrianz.
+							</span>
+							<br />
+							<span id="tagline" class="white">
+								I turn ideas into a website.
+							</span>
+						</h1>
+						<p
+							class="iconize-h mt-3 d-flex gap-3 gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.75"
+							data-once="true"
+							data-delay="2"
+						>
+							<i class="material-icons-outlined">laptop</i>
+							<span class="white">
+								Web Developer
+								<a
+									href="http://vanilla-js.com/"
+									target="_blank"
+									class="link blue p-0"
+								>
+									<span class="mono blue">VANILLA</span>
+								</a>
+							</span>
+						</p>
+						<p
+							class="iconize-h mt-3 d-flex gap-3 gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="1.2"
+							data-once="true"
+							data-delay="2"
+						>
+							<i class="material-icons-outlined">school</i>
+							<span class="white">
+								Studying Information Technology
+								<a
+									href="https://smkn4bdg.sch.id/"
+									target="_blank"
+									class="link salmon p-0"
+								>
+									<span class="mono salmon">@smkn4bandung</span>
+								</a>
+							</span>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="exp-spoil">
+				<div class="d-flex gap-5">
+					<div class="minor d-flex flex-column ai-end">
+						<h2
+							class="align-end gsap-anim"
+							data-gsaptype="zoom-out"
+							data-duration="0.5"
+							data-once="true"
+						>
+							my long journey
+						</h2>
+
+						<a
+							href="/experience.html"
+							class="btn btn-sm pill btn-o iconize-h mt-5 gsap-anim"
+							data-gsaptype="fade-down"
+							data-duration="0.5"
+							data-once="true"
+						>
+							Get in
+							<i class="material-icons fix">login</i>
+						</a>
+					</div>
+					<div class="major d-flex gap-3 overflow-x-auto">
+						<div
+							class="card gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.3"
+							data-once="true"
+						>
+							<h4 class="no-bold">
+								Student
+								<a href="" class="link yellow">
+									<span class="yellow">@smkn4bandung</span>
+								</a>
+							</h4>
+							<span class="mono">July 2021 - Now</span>
+							<p class="mt-3 silver md">
+								11th grade high school student who is majoring in Information
+								Technology. Here with my friends, I learned android dev, web
+								dev, database. Learning here is quite challenging with short
+								deadline assignments. DUH!
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="works-spoil">
+				<div class="d-flex gap-5 flex-row-reverse">
+					<div
+						class="minor d-flex flex-column ai-start gsap-anim"
+						data-gsaptype="zoom-out"
+						data-duration="0.5"
+						data-once="true"
+					>
+						<h2>some things i've built</h2>
+
+						<a
+							href="/works.html"
+							class="btn salmon btn-sm pill btn-o iconize-h mt-5 gsap-anim"
+							data-gsaptype="fade-down"
+							data-duration="0.5"
+							data-once="true"
+						>
+							More
+							<i class="material-icons fix">login</i>
+						</a>
+					</div>
+					<div class="major d-grid grid-col-2 gap-1">
+						<figure
+							class="figurify gsap-anim"
+							data-gsaptype="fade-right"
+							data-duration="0.3"
+							data-once="true"
+						>
+							<div class="overlay">
+								<h4 class="mb-2">Ingfokanime</h4>
+								<span># Web Development</span>
+							</div>
+							<img loading="lazy" src="_src/img/works/nime1.png" alt="" />
+						</figure>
+						<figure
+							class="figurify gsap-anim"
+							data-gsaptype="fade-right"
+							data-duration="0.7"
+							data-once="true"
+						>
+							<div class="overlay">
+								<h4 class="mb-2">Serat</h4>
+								<span># Web Development</span>
+							</div>
+							<img loading="lazy" src="_src/img/works/serat1.png" alt="" />
+						</figure>
+						<figure
+							class="figurify gsap-anim"
+							data-gsaptype="fade-right"
+							data-duration="1"
+							data-once="true"
+						>
+							<div class="overlay">
+								<h4 class="mb-2">Comikaze</h4>
+								<span># Mobile App</span>
+							</div>
+							<img loading="lazy" src="_src/img/works/comi1.png" alt="" />
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<section id="ab-spoil">
+				<div class="d-flex gap-5">
+					<div class="minor d-flex flex-column ai-end">
+						<h2
+							class="align-end gsap-anim"
+							data-gsaptype="zoom-out"
+							data-duration="0.5"
+							data-once="true"
+						>
+							then, who am i?
+						</h2>
+
+						<a
+							href="/about.html"
+							class="btn btn-sm pill btn-o iconize-h mt-5 gsap-anim"
+							data-gsaptype="fade-down"
+							data-duration="0.5"
+							data-once="true"
+						>
+							Find Out
+							<i class="material-icons fix">login</i>
+						</a>
+					</div>
+					<div class="major d-grid gap-2">
+						<div
+							class="card gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.3"
+							data-once="true"
+						>
+							<i class="material-icons blue" style="font-size: 4em">
+								inventory_2
+							</i>
+							<h4 class="no-bold mt-2">Result-Oriented</h4>
+							<p class="silver mt-2 md">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Corporis iste magni ratione esse.
+							</p>
+						</div>
+						<div
+							class="card gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.5"
+							data-once="true"
+						>
+							<i class="material-icons salmon" style="font-size: 4em">
+								details
+							</i>
+							<h4 class="no-bold mt-2">Detailed-Person</h4>
+							<p class="silver mt-2 md">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Corporis iste magni ratione esse.
+							</p>
+						</div>
+						<div
+							class="card gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.7"
+							data-once="true"
+						>
+							<i class="material-icons yellow" style="font-size: 4em">
+								extension
+							</i>
+							<h4 class="no-bold mt-2">Creative</h4>
+							<p class="silver mt-2 md">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Corporis iste magni ratione esse.
+							</p>
+						</div>
+						<div
+							class="card gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.9"
+							data-once="true"
+						>
+							<i class="material-icons purple" style="font-size: 4em">
+								visibility
+							</i>
+							<h4 class="no-bold mt-2">Aesthetics</h4>
+							<p class="silver mt-2 md">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Corporis iste magni ratione esse.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="people">
+				<div class="d-flex gap-5 flex-row-reverse">
+					<div
+						class="minor d-flex flex-column ai-start gsap-anim"
+						data-gsaptype="zoom-out"
+						data-duration="0.5"
+						data-once="true"
+					>
+						<h2>People reviews</h2>
+					</div>
+					<div class="major d-flex gap-3 overflow-x-auto">
+						<div
+							class="card gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.3"
+							data-once="true"
+						>
+							<p class="silver md">
+								Generally good with detail and checks work thoroughly, but there
+								have been one or two minor errors in work presented in the
+								current period Has proven ability to produce creative, original
+								ideas, plans, products or methods,even if they're not always
+								practical, in line with organization needs, or successful.
+							</p>
+							<div class="d-flex mt-4 gap-2">
+								<figure>
+									<img loading="lazy" src="_src/img/person.svg" alt="" />
+								</figure>
+								<div>
+									<h6 class="no-bold">Wahyu</h6>
+									<span class="mono sm">CEO</span>
+								</div>
+							</div>
+						</div>
+						<div
+							class="card gsap-anim"
+							data-gsaptype="fade-left"
+							data-duration="0.5"
+							data-once="true"
+						>
+							<p class="silver md">
+								Follows instructions well, but has a tendency to be too literal,
+								and can be lost unless there are firm guidelines. Or sometimes
+								may not take sufficient care to check the instructions before
+								starting.
+							</p>
+							<div class="d-flex mt-4 gap-2">
+								<figure>
+									<img loading="lazy" src="_src/img/person.svg" alt="" />
+								</figure>
+								<div>
+									<h6 class="no-bold">Ken</h6>
+									<span class="mono sm">Freelancer</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- FOOTER  -->
+			<section id="contact">
+				<div class="d-flex jc-between ai-start gap-5">
+					<div class="minor d-flex flex-column">
+						<h2
+							class="mb-3 gsap-anim"
+							data-gsaptype="zoom-out"
+							data-duration="0.5"
+							data-once="true"
+						>
+							Let's Talk About Action Now
+						</h2>
+
+						<div
+							class="d-flex ai-center gap-2 mt-auto gsap-anim"
+							data-gsaptype="fade-down"
+							data-duration="0.2"
+							data-once="true"
+						>
+							<button class="btn pill btn-sm p-2 iconize-h">
+								<i class="material-icons">mail</i>
+							</button>
+							<p>diazz.developer@gmail.com</p>
+						</div>
+						<div
+							class="d-flex ai-center gap-2 mt-3 gsap-anim"
+							data-gsaptype="fade-down"
+							data-duration="0.5"
+							data-once="true"
+						>
+							<button class="btn pill yellow btn-sm p-2 iconize-h">
+								<i class="material-icons">phone</i>
+							</button>
+							<p>+62 891234567</p>
+						</div>
+						<div
+							class="d-flex ai-center gap-2 mt-3 gsap-anim"
+							data-gsaptype="fade-down"
+							data-duration="0.8"
+							data-once="true"
+						>
+							<button class="btn pill purple btn-sm p-2 iconize-h">
+								<i class="material-icons">location_on</i>
+							</button>
+							<p>Bandung, West Java, Indonesia</p>
+						</div>
+					</div>
+					<form
+						id="sendmessage"
+						class="major"
+						onsubmit="sendMessage(event, this)"
+					>
+						<div class="alert iconize-h w-100 mb-3 sm">
+							<i class="material-icons">drafts</i>
+							Waiting for message...
+						</div>
+						<div
+							class="inp-float mb-3 gsap-anim"
+							data-gsaptype="fade-right"
+							data-duration="0.3"
+							data-once="true"
+						>
+							<input
+								type="text"
+								name="nama"
+								oninput="inputCheck(this)"
+								class="inp"
+								data-target="sendmessage"
+								required
+							/>
+							<span class="attr">Your name</span>
+						</div>
+						<div
+							class="inp-float mb-3 gsap-anim"
+							data-gsaptype="fade-right"
+							data-duration="0.6"
+							data-once="true"
+						>
+							<input
+								type="email"
+								name="email"
+								oninput="inputCheck(this)"
+								class="inp"
+								data-target="sendmessage"
+								required
+							/>
+							<span class="attr">Your Email</span>
+						</div>
+						<div
+							class="inp-float mb-3 gsap-anim"
+							data-gsaptype="fade-right"
+							data-duration="0.9"
+							data-once="true"
+						>
+							<textarea
+								name="pesan"
+								oninput="inputCheck(this)"
+								class="inp"
+								maxlength="230"
+								data-target="sendmessage"
+								required
+							></textarea>
+							<span class="attr">What do you think?</span>
+						</div>
+						<button type="submit" class="btn btn-lg disabled">Send</button>
+					</form>
+				</div>
+			</section>
+
+			<section id="copyright">
+				<div class="d-flex">
+					<div class="m-auto">
+						<p
+							class="gsap-anim"
+							data-gsaptype="zoom-in"
+							data-duration="0.5"
+							data-once="true"
+						>
+							Designed & Built by Diaz @2022
+						</p>
+						<div class="d-flex gap-2 mt-3 mx-auto jc-center">
+							<a
+								href="https://www.instagram.com/diaz_adrianz19/?hl=id"
+								target="_blank"
+								class="link fab fa-instagram gsap-anim"
+								data-gsaptype="fade-down"
+								data-duration="0.2"
+								data-once="true"
+							></a>
+							<a
+								href="https://github.com/Diaz-adrianz"
+								target="_blank"
+								class="link fab fa-github gsap-anim"
+								data-gsaptype="fade-down"
+								data-duration="0.4"
+								data-once="true"
+							></a>
+							<a
+								href="#"
+								target="_blank"
+								class="link fab fa-linkedin gsap-anim"
+								data-gsaptype="fade-down"
+								data-duration="0.6"
+								data-once="true"
+							></a>
+							<a
+								href="mailto:diazz.developer@gmail.com"
+								target="_blank"
+								class="link fas fa-envelope gsap-anim"
+								data-gsaptype="fade-down"
+								data-duration="0.8"
+								data-once="true"
+							></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- PACKAGES FIRST  -->
+		<script src="_src/js/validate.min.js"></script>
+
+		<!-- MY JS  -->
+		<script src="_src/js/base.js"></script>
+
+		<!-- PACKAGES  -->
+		<script src="_src/js/gsap-public/minified/gsap.min.js"></script>
+		<script src="_src/js/gsap-public/minified/ScrollTrigger.min.js"></script>
+		<script src="_src/js/typed.js/lib/typed.min.js"></script>
+
+		<script src="_src/js/myconfig-gsap.js"></script>
+
+		<!-- ICON FONTAWSOME CDN  -->
+		<script
+			src="https://kit.fontawesome.com/bc418b707a.js"
+			crossorigin="anonymous"
+		></script>
+
+		<script>
+			console.log(window.location.hash);
+
+			if (window.location.hash) {
+				let thisMain = document.querySelector('main');
+
+				setTimeout(() => {
+					thisMain.scrollTo(0, 0);
+				}, 1);
+
+				if (window.location.hash == '#contact') {
+					setTimeout(() => {
+						thisMain.scrollTop = thisMain.firstElementChild.offsetHeight * 5;
+					}, 2500);
+				}
+			}
+
+			const taglines = [
+				'I turn ideas into a website.',
+				'Create websites for all.',
+				'Boundlessly creativity.',
+				'Let Website Do The Magic!',
+			];
+
+			let typeTagline = new Typed('#tagline', {
+				strings: taglines,
+				typeSpeed: 70,
+				backSpeed: 50,
+				showCursor: false,
+				loop: true,
+				contentType: null,
+				backDelay: 1000,
+				shuffle: false,
+			});
+		</script>
+	</body>
+</html>

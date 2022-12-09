@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- MY CSS  -->
+		<link rel="stylesheet" href="_src/css/base.css" />
+		<link rel="stylesheet" href="_src/css/layout.css" />
+		<link rel="stylesheet" href="_src/css/component.css" />
+		<link rel="stylesheet" href="_src/css/media.css" />
+
+		<!-- ICON GOOGLE CDN  -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+
+		<link rel="shortcut icon" href="_src/img/icon.png" type="image/x-icon" />
+		<title>Diaz profil page</title>
+	</head>
+	<body id="experiencepage">
+		<!-- LOAD SCREEN  -->
+		<div class="load-screen fade show">
+			<figure>
+				<svg>
+					<circle class="meter" cx="75" cy="75" r="70" />
+				</svg>
+				<img src="_src/img/icon.png" alt="" />
+			</figure>
+		</div>
+
+		<div class="backdrop fade"></div>
+
+		<!-- HEADER  -->
+		<header class="d-flex ai-center jc-between">
+			<a
+				href="../"
+				class="link brand gsap-anim"
+				data-gsaptype="zoom-out"
+				data-duration="1"
+				data-once="true"
+				data-delay="2"
+			>
+				<figure>
+					<img src="_src/img/icon.png" alt="" />
+				</figure>
+			</a>
+			<nav class="d-flex ai-center gap-4 with-bd" id="navigation">
+				<a
+					href="experience.html"
+					class="on no-break link mono white-link yellow gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.3"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="yellow">01.</span>
+					Experiences
+				</a>
+				<a
+					href="works.html"
+					class="link mono white-link blue gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.5"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="blue">02.</span>
+					Works
+				</a>
+				<a
+					href="about.html"
+					class="link mono white-link salmon gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.7"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="salmon">03.</span>
+					About
+				</a>
+				<a
+					href="/#contact"
+					class="link mono white-link purple gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="0.9"
+					data-once="true"
+					data-delay="2"
+				>
+					<span class="purple">04.</span>
+					Contact
+				</a>
+				<a
+					href="#"
+					class="btn gsap-anim"
+					data-gsaptype="fade-down"
+					data-duration="1.1"
+					data-once="true"
+					data-delay="2"
+				>
+					Resume
+				</a>
+				<div class="social d-flex gap-2 mt-3">
+					<a
+						href="https://www.instagram.com/diaz_adrianz19/?hl=id"
+						target="_blank"
+						class="link fab fa-instagram"
+					></a>
+					<a
+						href="https://github.com/Diaz-adrianz"
+						target="_blank"
+						class="link fab fa-github"
+					></a>
+					<a href="#" target="_blank" class="link fab fa-linkedin"></a>
+					<a
+						href="mailto:diazz.developer@gmail.com"
+						target="_blank"
+						class="link fas fa-envelope"
+					></a>
+				</div>
+			</nav>
+			<button
+				class="btn btn-t gsap-anim iconize-h"
+				data-target="navigation"
+				data-gsaptype="fade-right"
+				data-duration="1"
+				data-once="true"
+				data-delay="2"
+				onclick="showup(event, this, 'menu')"
+			>
+				<i class="material-icons">menu</i>
+			</button>
+		</header>
+
+		<!-- NAVIGATIONS METERS  -->
+		<aside
+			class="fix-l gsap-anim"
+			data-gsaptype="zoom-out"
+			data-duration="1"
+			data-once="true"
+			data-delay="2"
+		>
+			<div class="nav-dots">
+				<span class="on"></span>
+				<span></span>
+			</div>
+			<span></span>
+		</aside>
+
+		<!-- SOCIAL MEDIA  -->
+		<aside
+			class="fix-r gsap-anim"
+			data-gsaptype="zoom-out"
+			data-duration="1"
+			data-once="true"
+			data-delay="2"
+		>
+			<div class="social">
+				<a
+					href="https://www.instagram.com/diaz_adrianz19/?hl=id"
+					target="_blank"
+					class="link fab fa-instagram"
+				></a>
+				<a
+					href="https://github.com/Diaz-adrianz"
+					target="_blank"
+					class="link fab fa-github"
+				></a>
+				<a href="#" target="_blank" class="link fab fa-linkedin"></a>
+				<a
+					href="mailto:diazz.developer@gmail.com"
+					target="_blank"
+					class="link fas fa-envelope"
+				></a>
+			</div>
+			<span></span>
+		</aside>
+
+		<!-- MAIN | CONTENTS -->
+		<main>
+			<section id="exp-null">
+				<div class="d-flex undone-wrap">
+					<div class="undone">
+						<div
+							class="gear gsap-anim"
+							data-gsaptype="zoom-in"
+							data-duration="0.75"
+							data-once="true"
+							data-delay="2"
+						>
+							<span>
+								<i class="material-icons">settings</i>
+							</span>
+							<span>
+								<i class="material-icons">settings</i>
+							</span>
+						</div>
+						<div
+							class="text gsap-anim"
+							data-gsaptype="fade-up"
+							data-duration="1"
+							data-once="true"
+							data-delay="2"
+						>
+							<h3>
+								This section is still
+								<span class="salmon">under construction</span>
+								.
+							</h3>
+							<p>Please come back later to see more!</p>
+							<a href="/" class="btn btn-s-s btn-sm mt-3">Go home</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- MY JS  -->
+		<script src="_src/js/base.js"></script>
+
+		<!-- PACKAGES  -->
+		<script src="_src/js/gsap-public/minified/gsap.min.js"></script>
+		<script src="_src/js/gsap-public/minified/ScrollTrigger.min.js"></script>
+
+		<script src="_src/js/myconfig-gsap.js"></script>
+
+		<!-- ICON FONTAWSOME CDN  -->
+		<script
+			src="https://kit.fontawesome.com/bc418b707a.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
