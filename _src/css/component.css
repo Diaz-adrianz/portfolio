@@ -229,15 +229,16 @@
 	cursor: pointer;
 	position: relative;
 	transition: 0.5s;
-	border-width: 0;
+	border-width: 1px;
 	border-style: solid;
-	border-color: var(--salmon);
+	border-color: var(--silver);
 }
 .gallerybox .imgs img:hover {
 	filter: none;
 }
 .gallerybox .imgs img.on {
 	filter: none !important;
+	border-color: var(--salmon) !important;
 	border-width: 1.7em !important;
 }
 
