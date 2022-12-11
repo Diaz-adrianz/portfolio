@@ -70,10 +70,10 @@ if (gsapAnims) {
 
 		if (once) {
 			action = {
-				toggleActions: 'restart complete resume pause',
-				onLeaveBack: (self) => self.disable(),
+				toggleActions: 'play pause resume pause',
 			};
 		}
+		console.log(action);
 		ScrollTrigger.create({
 			trigger: item,
 			animation: anim,
