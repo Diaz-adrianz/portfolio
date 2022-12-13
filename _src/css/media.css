@@ -10,17 +10,20 @@
 	}
 
 	#w-ingfokanime > .d-flex,
+	#w-binjai > .d-flex,
 	#w-serat > .d-flex,
 	#w-comikaze > .d-flex {
 		gap: 1em !important;
 	}
 
 	#w-ingfokanime .gallerybox,
+	#w-binjai .gallerybox,
 	#w-serat .gallerybox,
 	#w-comikaze .gallerybox {
 		max-width: 400px;
 	}
 	#w-ingfokanime .tablayout .contents > div.c1,
+	#w-binjai .tablayout .contents > div.c1,
 	#w-serat .tablayout .contents > div.c1,
 	#w-comikaze .tablayout .contents > div.c1 {
 		padding-bottom: 1em !important;
@@ -153,12 +156,14 @@
 	}
 
 	#w-ingfokanime > .d-flex,
+	#w-binjai > .d-flex,
 	#w-serat > .d-flex,
 	#w-comikaze > .d-flex {
 		gap: 3em !important;
 	}
 
 	#w-ingfokanime .tablayout .contents > div.c1,
+	#w-binjai .tablayout .contents > div.c1,
 	#w-serat .tablayout .contents > div.c1,
 	#w-comikaze .tablayout .contents > div.c1 {
 		padding-bottom: 3em !important;

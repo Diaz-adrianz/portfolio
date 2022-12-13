@@ -253,12 +253,14 @@ main > section > div > div {
 
 /* CONTENT works page  */
 #w-ingfokanime .gallerybox,
+#w-binjai .gallerybox,
 #w-serat .gallerybox,
 #w-comikaze .gallerybox {
 	width: 100%;
-	max-width: 500px;
+	max-width: 480px;
 }
 #w-ingfokanime > .d-flex,
+#w-binjai > .d-flex,
 #w-serat > .d-flex,
 #w-comikaze > .d-flex {
 	flex-wrap: wrap;

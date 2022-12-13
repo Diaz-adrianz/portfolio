@@ -73,7 +73,6 @@ if (gsapAnims) {
 				toggleActions: 'play pause resume pause',
 			};
 		}
-		console.log(action);
 		ScrollTrigger.create({
 			trigger: item,
 			animation: anim,

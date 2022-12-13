@@ -194,7 +194,8 @@ if (galleryBoxs.length > 0) {
 				placeTitleImgView = imageView.querySelector('.title');
 
 			placeImgView.setAttribute('src', placeImg.getAttribute('src'));
-			placeTitleImgView.textContent = placeTitle.textContent;
+			placeTitleImgView.textContent =
+				placeTitle.textContent + ' | ' + placeSubtitle.textContent;
 			imageView.classList.add('show');
 		});
 
